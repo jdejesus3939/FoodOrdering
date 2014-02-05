@@ -3,72 +3,82 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#F0E68C" >
- 
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:padding="10dip" >
-        <!--  View Title Label -->
+
+        <!-- View Title Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
             android:text="LOGIN"
             android:textColor="#000000"
-            android:textSize="25dip"
+            android:textSize="25sp"
             android:textStyle="bold" />
-        <!--  A# number Label -->
+        <!-- A# number Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="A number"
             android:textColor="#000000" />
-        
-        <!--  A# number TextField -->
+
+        <!-- A# number TextField -->
+
         <EditText
             android:id="@+id/loginAnumber"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded"
             android:hint="Enter 8-digits A# starts with A"
-            android:textColor="#000000"
-            android:background="@drawable/white_rounded" />
- 
-        <!--  Password Label -->
+            android:textColor="#000000" />
+
+        <!-- Password Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Password"
             android:textColor="#000000" />
-        <!--  Password TextField -->
+        <!-- Password TextField -->
+
         <EditText
             android:id="@+id/loginPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:password="true"
+            android:background="@drawable/white_rounded"
             android:hint="Enter password"
-            android:textColor="#000000"
-            android:background="@drawable/white_rounded" />
- 
-        <!--  Error message -->
-        <TextView android:id="@+id/login_error"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#e30000"
-                    android:padding="10dip"
-                    android:textStyle="bold"/>
- 
-        <!--  Login Button -->
+            android:inputType="textPassword"
+            android:textColor="#000000" />
+
+        <!-- Error message -->
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textStyle="bold" />
+
+        <!-- Login Button -->
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn"
             android:text="Login"
-            android:textColor="#000000"
-            android:background="@drawable/rounded_btn" />
- 
-        <!--  Link to Registration Screen -->
+            android:textColor="#000000" />
+
+        <!-- Link to Registration Screen -->
+
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
             android:layout_width="fill_parent"
@@ -79,5 +89,5 @@
             android:textColor="#21dbd4"
             android:textStyle="bold" />
     </LinearLayout>
- 
+
 </ScrollView>
