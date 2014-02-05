@@ -3,13 +3,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#F0E68C" >
- 
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:padding="10dip" >
-        <!--  View Title Label -->
+
+        <!-- View Title Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -18,94 +20,114 @@
             android:textColor="#000000"
             android:textSize="25dip"
             android:textStyle="bold" />
-        
-        <!--  A# number Label -->
+
+        <!-- A# number Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="A number"
             android:textColor="#000000" />
-        <!--  A# number TextField -->
+        <!-- A# number TextField -->
+
         <EditText
             android:id="@+id/registerAnumber"
-            android:inputType="textNoSuggestions"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded"
             android:hint="Enter 8-digits A# starts with A"
+            android:inputType="textNoSuggestions"
             android:textColor="#000000" />
-        
-        <!--  Name Label -->
+
+        <!-- Name Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Full Name"
             android:textColor="#000000" />
-        <!--  Name TextField -->
+        <!-- Name TextField -->
+
         <EditText
             android:id="@+id/registerName"
-            android:inputType="textNoSuggestions"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded"
             android:hint="Enter full name"
+            android:inputType="textNoSuggestions"
             android:textColor="#000000" />
- 
-        <!--  Email Label -->
+
+        <!-- Email Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Email"
             android:textColor="#000000" />
-        <!--  Email TextField -->
+        <!-- Email TextField -->
+
         <EditText
             android:id="@+id/registerEmail"
-            android:inputType="textEmailAddress|textNoSuggestions"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded"
             android:hint="Enter email"
+            android:inputType="textEmailAddress|textNoSuggestions"
             android:textColor="#000000" />
- 
-        <!--  Password Label -->
+
+        <!-- Password Label -->
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Password"
             android:textColor="#000000" />
-        <!--  Password TextField -->
+        <!-- Password TextField -->
+
         <EditText
             android:id="@+id/registerPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:password="true"
+            android:background="@drawable/white_rounded"
             android:hint="Enter password"
+            android:inputType="textPassword"
             android:textColor="#000000" />
- 
-        <!--  Error message -->
-        <TextView android:id="@+id/register_error"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#e30000"
-                    android:padding="10dip"
-                    android:textStyle="bold" />
- 
-        <!--  Login Button -->
+
+        <!-- Error message -->
+
+        <TextView
+            android:id="@+id/register_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textStyle="bold" />
+
+        <!-- Login Button -->
+
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn"
             android:text="Register"
             android:textColor="#000000" />
- 
-        <!--  Link to Login Screen -->
+
+        <!-- Link to Login Screen -->
+
         <Button
             android:id="@+id/btnLinkToLoginScreen"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dip"
             android:layout_marginBottom="40dip"
+            android:layout_marginTop="40dip"
             android:background="@null"
             android:text="Already registered. Login Me!"
             android:textColor="#21dbd4"
             android:textStyle="bold" />
     </LinearLayout>
- 
+
 </ScrollView>
