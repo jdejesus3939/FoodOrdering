@@ -31,12 +31,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Enter 8-digits A# starts with A"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/white_rounded" />
  
         <!--  Password Label -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Password"
             android:textColor="#000000" />
         <!--  Password TextField -->
@@ -46,7 +48,8 @@
             android:layout_height="wrap_content"
             android:password="true"
             android:hint="Enter password"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/white_rounded" />
  
         <!--  Error message -->
         <TextView android:id="@+id/login_error"
@@ -62,7 +65,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/rounded_btn" />
  
         <!--  Link to Registration Screen -->
         <Button
