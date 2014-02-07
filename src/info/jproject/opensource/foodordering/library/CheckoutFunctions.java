@@ -14,13 +14,6 @@ public class CheckoutFunctions {
 	
 	private JSONParser jsonParser;
 	
-	private static String SubCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_subway.php";
-	private static String EinsCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_einstein.php";
-	private static String SimCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_simplytogo.php";
-	private static String StarCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_starbucks.php";
-	private static String BajaCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_baja.php";
-	private static String UCCheckoutURL = "http://jproject.podserver.info/android_api_login/checkout_uc.php";
-	
 	String name = null;
 	String anumber = null;
 	
@@ -56,7 +49,7 @@ public class CheckoutFunctions {
     	params.add(new BasicNameValuePair("muffinC",items[11]));
     	//Log.e("check#7", "till this far");
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(EinsCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.EinsCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON Einstein @checkoutFunction.java", json.toString());
         
@@ -93,7 +86,7 @@ public class CheckoutFunctions {
     	params.add(new BasicNameValuePair("spinach",items[11]));
     	//Log.e("check#7", "till this far");
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(SubCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.SubCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON subway @checkoutFunction.java", json.toString());
         
@@ -124,7 +117,7 @@ public class CheckoutFunctions {
     	params.add(new BasicNameValuePair("drinkC",items[8]));
     	//Log.e("check#7", "till this far");
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(SimCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.SimCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON simplytogo @checkoutFunction.java", json.toString());
         
@@ -158,7 +151,7 @@ public class CheckoutFunctions {
     	params.add(new BasicNameValuePair("drink4C",items[11]));
     	//Log.e("check#7", "till this far");
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(StarCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.StarCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON starbucks @checkoutFunction.java", json.toString());
         
@@ -198,7 +191,7 @@ public class CheckoutFunctions {
     	
     	//Log.e("check#7", "till this far");
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(BajaCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.BajaCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON ultimate baja @checkoutFunction.java", json.toString());
         
@@ -236,7 +229,7 @@ public class CheckoutFunctions {
     	for(int i=0; i<classics.length; i++)
     		params.add(new BasicNameValuePair("tag"+Integer.toString(i),classics[i]));
     	
-    	JSONObject json = jsonParser.getJSONFromUrl(UCCheckoutURL, PHPSESSID, params);
+    	JSONObject json = jsonParser.getJSONFromUrl(AppConstants.UCCheckoutURL, PHPSESSID, params);
     	// return json
         Log.e("JSON UnivCenter @checkoutFunction.java", json.toString());
         

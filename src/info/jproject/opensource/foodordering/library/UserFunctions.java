@@ -18,8 +18,8 @@ public class UserFunctions {
     // use http://10.0.2.2/ to connect to your localhost ie http://localhost/
     // use android api folder name that located in htdocs folder
     // REMEMBER: the FOLDER, but NOT the database 
-    private static String loginURL = "http://jproject.podserver.info/android_api_login/android_index.php";
-    private static String registerURL = "http://jproject.podserver.info/android_api_login/android_index.php";
+    //private static String loginURL = "http://jproject.podserver.info/android_api_login/android_index.php";
+    //private static String registerURL = "http://jproject.podserver.info/android_api_login/android_index.php";
     //private static String logoutURL = "http://jproject.podserver.info/android_api_login/android_index.php";
     
     private static String login_tag = "login";
@@ -39,7 +39,7 @@ public class UserFunctions {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("vendor", login_tag));
         params.add(new BasicNameValuePair("anumber", anumber));
-        JSONObject json = jsonParser.androidLogin(loginURL, params);
+        JSONObject json = jsonParser.androidLogin(AppConstants.loginURL, params);
         // return json
         // Log.e("JSON", json.toString());
         return json;
@@ -58,7 +58,7 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("password", password));
         Log.e("params.get0.4 @UserFunctions", params.get(4).toString());
         // getting JSON Object
-        JSONObject json = jsonParser.androidRegister(registerURL, params);
+        JSONObject json = jsonParser.androidRegister(AppConstants.registerURL, params);
         // return json
         return json;
     }
