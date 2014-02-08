@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+@Deprecated
 public class UnivCenterInfoActivity extends Activity{
 	
 	private Button next;

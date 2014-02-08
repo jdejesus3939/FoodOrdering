@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+@Deprecated
 public class SimplyToGoInfoActivity extends Activity{
 	
 	private Button next;
