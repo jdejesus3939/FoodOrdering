@@ -37,12 +37,12 @@ public class HallwayActivity extends Activity {
 		HallwayCustomAdapterListView hcalv = new HallwayCustomAdapterListView(
 				getApplicationContext(), food_products, icon_food_products);
 
-		// must call recycle() after done using obtainTypedArray
-		//icon_food_products.recycle();
+		// must call recycle() after using obtainTypedArray
+		// icon_food_products.recycle();
 
 		// Get the login session id
-		//Intent i = getIntent();
-		//PHPSESSID = i.getStringExtra("Set-Cookie");
+		Intent i = getIntent();
+		PHPSESSID = i.getStringExtra("Set-Cookie");
 
 		// Binding Array to ListAdapter
 		final ListView list = (ListView) findViewById(android.R.id.list);
@@ -52,92 +52,16 @@ public class HallwayActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 
-				//Toast.makeText(getApplicationContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
-
-				switch (position) {
-				case 0:
-					// Launching new Activity on selecting single List Item
-					Intent univcenterInfo = new Intent(getApplicationContext(),
-							UnivCenterInfoActivity.class);
-					// univcenterInfo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					univcenterInfo.putExtra("Set-Cookie", PHPSESSID);
-					univcenterInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(univcenterInfo);
-					break;
-
-				case 1:
-					// Launching new Activity on selecting single List Item
-					Intent subwayInfo = new Intent(getApplicationContext(),
-							SubwayInfoActivity.class);
-					// subwayInfo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					subwayInfo.putExtra("Set-Cookie", PHPSESSID);
-					subwayInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(subwayInfo);
-					break;
-
-				case 2:
-					// Launching new Activity on selecting single List Item
-					Intent einsteinbrosInfo = new Intent(
-							getApplicationContext(),
-							EinsteinBrosInfoActivity.class);
-					// einsteinbrosInfo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					einsteinbrosInfo.putExtra("Set-Cookie", PHPSESSID);
-					einsteinbrosInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(einsteinbrosInfo);
-					break;
-
-				case 3:
-					// Launching new Activity on selecting single List Item
-					Intent ultimatebajaInfo = new Intent(
-							getApplicationContext(),
-							UltimateBajaInfoActivity.class);
-					// ultimatebajaInfo.addFlags
-					// (Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					ultimatebajaInfo.putExtra("Set-Cookie", PHPSESSID);
-					ultimatebajaInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(ultimatebajaInfo);
-					break;
-
-				case 4:
-					// Launching new Activity on selecting single List Item
-					Intent simplytogoInfo = new Intent(getApplicationContext(),
-							SimplyToGoInfoActivity.class);
-					// simplytogoInfo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					simplytogoInfo.putExtra("Set-Cookie", PHPSESSID);
-					simplytogoInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(simplytogoInfo);
-					break;
-
-				case 5:
-					// Launching new Activity on selecting single List Item
-					Intent starbucksInfo = new Intent(getApplicationContext(),
-							StarbucksInfoActivity.class);
-					// starbucksInfo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					// sending data to new activity
-					starbucksInfo.putExtra("Set-Cookie", PHPSESSID);
-					starbucksInfo.putExtra("prod", Integer.toString(position));
-					//Log.e("Set-Cookie", PHPSESSID);
-					startActivity(starbucksInfo);
-					break;
-
-				default:
-					break;
-				}
-
+				// Launching new Activity on selecting single List Item
+				Intent i = new Intent(getApplicationContext(),
+						InfoActivity.class);
+				// sending data to new activity
+				i.putExtra("Set-Cookie", PHPSESSID);
+				i.putExtra("prod", position);
+				// Log.e("Set-Cookie", PHPSESSID);
+				startActivity(i);
 			}
-			
 		});
-
 	}
 
 	@Override
